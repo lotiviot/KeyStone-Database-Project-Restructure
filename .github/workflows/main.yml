@@ -19,10 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: false 
-      PROJECT_PATH: bandila-website #name of the react project
+      PROJECT_PATH: keystone-database-project-restructure #name of the react project
     defaults:
       run:
-        working-directory: bandila-website #name of the react project
+        working-directory: keystone-database-project-restructure #name of the react project
     steps:  
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
