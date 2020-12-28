@@ -1,0 +1,47 @@
+//@import '~IndexCSS/master';
+.backend-field{
+
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;     
+
+}
+
+.login-main-flex{
+  //background-image: $headerGradient, url("/images/header_img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: auto;
+  //padding-left: $offsetLeft;
+  .admin-login-form{
+    margin-top: 25vw;
+    padding-bottom: 5vw;
+    h3{
+      color: white;
+    }
+    .field{
+      display: flex;
+      justify-content: flex-end;
+      input{
+        justify-content: center;
+        align-items: center;
+        margin-right: 20%;
+      }
+      label{
+        align-self: center;
+        //font-family: $fontHindVadodara;
+        color: white;
+      }
+    }
+    .button{
+      width: 25%;
+    }
+  }
+}
+
+
