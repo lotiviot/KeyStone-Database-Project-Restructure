@@ -5,9 +5,11 @@ import {db , storage} from 'constants/Fire';
 import uuid from "uuid";
 import CheckboxContainer from './CheckboxContainer';
 import GrabUrl from 'admin/LoadFunctions/GrabUrl';
+import { DataGrid } from '@material-ui/data-grid';
 
 //this import will need to be able to be flexible as necessary with whatever new backend component is introduced prefixed, Load
 import load_notes from 'admin/LoadFunctions/LoadTemplate';
+import { TextareaAutosize } from '@material-ui/core';
 
 export default class AdminComponent extends Component {
 
@@ -94,44 +96,73 @@ export default class AdminComponent extends Component {
     
 
     render() { 
+        const columns = [
+            { field: 'id', headerName: 'ID', width: 70 },
+            { field: 'firstName', headerName: 'First name', width: 130 },
+            { field: 'lastName', headerName: 'Last name', width: 130 },
+            {
+              field: 'age',
+              headerName: 'Age',
+              type: 'number',
+              width: 90,
+            },
+            {
+              field: 'fullName',
+              headerName: 'Full name',
+              description: 'This column has a value getter and is not sortable.',
+              sortable: false,
+              width: 160,
+              valueGetter: (params) =>
+                `${params.getValue('firstName') || ''} ${params.getValue('lastName') || ''}`,
+            },
+          ];
+        const columns_n = [
+            { 
+                field: 'id', headerName: 'ID', width: 70 
+            },
+            {
+                field: 'fullName', headerName: 'Full Name', width: 200 
+            },
+            {
+                field: 'dateSubmitted', headerName: 'Date Submitted', width: 120, type: "date" 
+            },
+            {
+                field: 'phoneNumber', headerName: 'Phone Number', width: 150,
+            },
+            {
+                field: 'address', headerName: 'Address', width: 400 
+            },
+            {
+                field: 'email', headerName: 'Email', width: 200 , type: 'email'
+            },
+            {
+                field: 'amount', headerName: 'Amount', width: 120 , type: 'currency'
+            },
+            {
+                field: 'dateDonorContacted', headerName: 'Date Donor Contacted', width: 120 , type: "date"
+            },
+            {
+                field: 'reason', headerName: 'Reason', width: TextareaAutosize 
+            },
+        ]
+
+        const rows_n = [
+            {
+                id: '1',
+                fullName: "Tristan Lotivio",
+                dateSubmitted: "12/30/2020",
+                phoneNumber: "(123)456-7890",
+                address: "5016 Horseshoe Trail Morristown, Tennessee 37814",
+                email: "tclotivio@outlook.com",
+                amount: "$12.00",
+                dateDonorContacted: "12/30/2020",
+                reason: "money",
+            }
+        ]
         return (
             //whole return for form and checkbox
-            <div>
-                {/*form html */}
-                <form onSubmit={this.handleSubmit}>
-                    <h3 className="h4 text-center mb-4">Template Component: {this.state.dp_name}</h3>
-                        <input 
-                            value={this.state.dp_DocName} 
-                            onChange={this.handleChange} 
-                            type="text" 
-                            name="dp_DocName" 
-                            id="dp_DocName" 
-                            placeholder="Document Name" 
-                        />
-                        <input 
-                            value={this.state.dp_Title} 
-                            onChange={this.handleChange} 
-                            type="text" 
-                            name="dp_Title" 
-                            id="dp_Title" 
-                            placeholder="Title" 
-                        />
-                        <textarea 
-                            value={this.state.dp_TextArea} 
-                            onChange={this.handleChange} 
-                            type="text" 
-                            name="dp_TextArea" 
-                            id="dp_TextArea" 
-                            placeholder="Text Area" 
-                        />
-                        <input 
-                            type="file"
-                            onChange={this.fileChange}
-                        />
-                        <input type="submit" value="Submit"/>
-                </form>
-        {/*implementation and loading of checkbox container system */}
-        {this.state.item.length > 0 && <CheckboxContainer item={this.state.item} collectionName={this.state.collectionName}/>}
+            <div className="dataset">
+                      <DataGrid autoHeight rows={rows_n} columns={columns_n} checkboxSelection />
         </div>
         )
     }

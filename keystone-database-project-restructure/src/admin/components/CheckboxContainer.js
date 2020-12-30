@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from '../../LoadFunctions/Checkbox';
+import Checkbox from '../LoadFunctions/Checkbox';
 import { db , storage } from 'constants/Fire';
 
 //checkbox container component which presents the information that is given from props as well as handles the deletion of any information in the container
