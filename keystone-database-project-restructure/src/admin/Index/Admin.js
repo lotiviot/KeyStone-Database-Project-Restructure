@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
 import 'admin/Admin.scss'
-import {load_collections} from 'admin/LoadFunctions/LoadTemplate'
+import LoadDataGrid from 'constants/LoadDataGrid'
 import BandilaDataGrid from 'admin/components/Body/BandilaDataGrid'
 
 
@@ -14,11 +14,9 @@ class AdminPage extends Component {
             
     }
     
-
-    logout() {
+    logout = () => {
         fire.auth().signOut();
-    }
-    
+    }    
 
     render() {
         return (

@@ -11,14 +11,19 @@ import { DataGrid } from '@material-ui/data-grid';
 import uuid from "uuid";
 
 //this import will need to be able to be flexible as necessary with whatever new backend component is introduced prefixed, Load
-import load_notes from 'admin/LoadFunctions/LoadTemplate';
-import { TextareaAutosize } from '@material-ui/core';
-import {testData , Columns} from 'constants/Data'
+
+import {Columns} from 'constants/Data'
+import LoadDataGrid from 'constants/LoadDataGrid'
+
 
 export default function AdminComponent()
 {
     const [selected, setSelected] = React.useState([]);
-   
+    const [data, setData] = React.useState([]);
+    LoadDataGrid().then((e) => {
+        setData(e)
+    })
+
     return (
         //whole return for form and checkbox
         <div>
@@ -26,16 +31,15 @@ export default function AdminComponent()
             <div className="dataset">
                 <DataGrid 
                     autoHeight 
-                    rows={testData} 
+                    rows={data} 
                     columns={Columns} 
                     checkboxSelection 
                     pageSize={13} 
                     onSelectionChange={(newSelection) => {
-                        console.log(newSelection)
                         setSelected(newSelection.rowIds)
-                    }} />
+                    }} 
+                />
             </div>
-            {console.log(selected)}
         </div>    
     )
     
