@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import fire from 'constants/Fire';
 import 'admin/Admin.scss'
 import {load_collections} from 'admin/LoadFunctions/LoadTemplate'
-import AdminComponent from 'admin/components/AdminComponent'
+import BandilaDataGrid from 'admin/components/Body/BandilaDataGrid'
 
 
 
@@ -23,8 +23,8 @@ class AdminPage extends Component {
     render() {
         return (
                 <div className="App">
-                    <h1>Admin Page Component Suite</h1>
-                    <AdminComponent collectionName={load_collections[4]}/>
+                    {/* <h1>Admin Page Component Suite</h1> */}
+                    <BandilaDataGrid/>
                     <button className="backend-field" onClick={this.logout}>log out</button>
                 </div> 
         );

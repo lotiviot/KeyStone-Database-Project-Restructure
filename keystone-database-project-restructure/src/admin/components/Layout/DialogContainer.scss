@@ -1,0 +1,98 @@
+#div_top_hypers {
+    background-color:#eeeeee;
+    display:inline;      
+}
+#ul_top_hypers li{
+    display: inline;
+}
+
+#top_menu {
+    color: white;
+  }
+  #top_menu > ul {
+    display: flex;
+  }
+  #top_menu li {
+    List-style: none;
+    padding: 5px;
+    font: bold 14px tahoma;
+  }
+
+@media only screen and (max-width: 2560px) {
+
+    .nav{
+        height: 84px;
+       display: table;   /* Allow the centering to work */
+        margin: 0 auto; 
+        li {
+            display: inline;
+        }  
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .nav{
+
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .nav{
+
+    }
+}

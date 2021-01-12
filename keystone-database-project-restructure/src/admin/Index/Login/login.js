@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
-import '../Admin.scss'
+import './login.scss'
 
 //simple login component that handles the given name
 class Login extends Component {

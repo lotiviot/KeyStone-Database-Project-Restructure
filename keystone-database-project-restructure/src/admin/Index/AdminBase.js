@@ -1,7 +1,7 @@
 //true ACS parent component that checks if user is logged in, if yes send to suite if not send to login
 import React, { Component } from 'react'
 import fire from 'constants/Fire'
-import Login from './login';
+import Login from './Login/login';
 import Admin from './Admin';
 
 
