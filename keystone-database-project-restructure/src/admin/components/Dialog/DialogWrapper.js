@@ -30,15 +30,14 @@ export default function DialogWrapper(props) {
 
   const handleClose = (value) => {
     setOpen(false);
-    setSelectedValue(value);
   };
 
   let renderSwitch = (dialog) => {
     switch(dialog) {
       case 'Upload':
-        return <Upload selectedValue={selectedValue} open={open} onClose={handleClose} />
+        return <Upload open={open} onClose={handleClose} />
       case 'Delete':
-        return <Delete selectedValue={selectedValue} open={open} onClose={handleClose} />
+        return <Delete open={open} onClose={handleClose} />
     }
   }
 

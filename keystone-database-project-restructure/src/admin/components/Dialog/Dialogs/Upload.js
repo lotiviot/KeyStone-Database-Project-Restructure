@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
 import { blue } from '@material-ui/core/colors';
 import uuid from "uuid";
 import {db} from 'constants/Fire'
@@ -60,6 +62,7 @@ export default function Upload(props) {
         .then(
             function() { 
                 console.log("check it");
+                setId(uuid.v4())
             })
             .catch(function(error){
                 console.error("wrong",error);
@@ -70,13 +73,14 @@ export default function Upload(props) {
     
     alert("Refresh the page to see changes!")
 }
-  var asdf = ""
-  var asdf2 = ""
+  let test = () =>{
+    console.log("thing")
+  }
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <form >
-        <DialogTitle id="simple-dialog-title">Upload Donation</DialogTitle>
-                        <input 
+            <DialogTitle id="simple-dialog-title">Upload Donation</DialogTitle>
+                    <DialogContent>
+                    <input 
                             value={firstName} 
                             onChange={(e)=>{ 
                               setFirstName(e.target.value)
@@ -184,8 +188,11 @@ export default function Upload(props) {
                             className="backend-field"
                             placeholder="Reason" 
                         />
-                        <input className="backend-field" type="submit" value="Submit"/>
-                </form>
+                    </DialogContent>
+                    <DialogActions>
+                    <button onClick={() => {AddDoc(); onClose()
+                        }}>test </button>
+                    </DialogActions> 
     </Dialog>
   );
 }
