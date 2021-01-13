@@ -190,7 +190,7 @@ export default function Upload(props) {
                         />
                     </DialogContent>
                     <DialogActions>
-                    <button onClick={() => {AddDoc(); onClose()
+                    <button onClick={() => {AddDoc()
                         }}>test </button>
                     </DialogActions> 
     </Dialog>
