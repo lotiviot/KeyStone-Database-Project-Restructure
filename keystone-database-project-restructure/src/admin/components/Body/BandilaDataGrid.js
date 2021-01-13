@@ -6,7 +6,7 @@ import DialogContainer from 'admin/components/Layout/DialogContainer'
 import './BandilaDataGrid.scss'
 
 // import CheckboxContainer from './CheckboxContainer';
-import GrabUrl from 'admin/LoadFunctions/GrabUrl';
+//import GrabUrl from 'admin/LoadFunctions/GrabUrl';
 import { DataGrid } from '@material-ui/data-grid';
 import uuid from "uuid";
 

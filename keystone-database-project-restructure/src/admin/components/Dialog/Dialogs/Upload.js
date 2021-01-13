@@ -39,20 +39,21 @@ export default function Upload(props) {
  let AddDoc = async(e) => {     
 
     //object creation
+    console.log('asdf')
     const doc = {
-        docid:id ,
-        docfirstName:firstName ,
-        doclastName:lastName ,
-        docdateSubmitted:dateSubmitted ,
-        docphoneNumber:phoneNumber ,
-        docaddress:address ,
-        doccity:city ,
-        docstate:state ,
-        doczipCode:zipCode ,
-        docemail:email ,
-        docamount:amount ,
-        docdateDonorContacted:dateDonorContacted ,
-        docreason:reason ,
+        id:id ,
+        firstName:firstName ,
+        lastName:lastName ,
+        dateSubmitted:dateSubmitted ,
+        phoneNumber:phoneNumber ,
+        address:address ,
+        city:city ,
+        state:state ,
+        zipCode:zipCode ,
+        email:email ,
+        amount:amount ,
+        dateDonorContacted:dateDonorContacted ,
+        reason:reason ,
     }
 
     //firestore object creation with error checking

@@ -36,8 +36,8 @@ export default function DialogWrapper(props) {
     switch(dialog) {
       case 'Upload':
         return <Upload open={open} onClose={handleClose} />
-      case 'Delete':
-        return <Delete open={open} onClose={handleClose} />
+       case 'Delete':
+         return <Delete open={open} onClose={handleClose} />
     }
   }
 
