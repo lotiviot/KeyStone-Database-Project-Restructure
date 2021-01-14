@@ -6,7 +6,7 @@ import './DialogContainer.scss'
 
 
 //simple routing template that uses routes established in constants/routes to build simple backend navbar
-export default function DialogContainer() {
+export default function DialogContainer(props) {
     
         return (
             
@@ -14,7 +14,7 @@ export default function DialogContainer() {
             <nav id = "top_menu">
                 <ul>
                 <li className ="li"><DialogWrapper label ="Upload"/></li>
-                <li className ="li"><DialogWrapper label ="Delete"/></li>
+                <li className ="li"><DialogWrapper label ="Delete" selectedData={props.selectedData}/></li>
                 {/* <li className ="li"><DialogWrapper label ="Filter"/></li>
                 <li className ="li"><DialogWrapper label ="Email"/></li>
                 <li className ="li"><DialogWrapper label ="Group"/></li>

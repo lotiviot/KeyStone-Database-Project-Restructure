@@ -58,7 +58,7 @@ export default function Upload(props) {
 
     //firestore object creation with error checking
     await db.collection("payments")
-        .doc(doc.docid)
+        .doc(doc.id)
         .set(doc)
         .then(
             function() { 
@@ -72,7 +72,6 @@ export default function Upload(props) {
     //data reset. 
     //maybe once this is complete we could have the page refresh immediately?
     
-    alert("Refresh the page to see changes!")
 }
   let test = () =>{
     console.log("thing")

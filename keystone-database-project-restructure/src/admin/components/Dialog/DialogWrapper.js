@@ -37,7 +37,7 @@ export default function DialogWrapper(props) {
       case 'Upload':
         return <Upload open={open} onClose={handleClose} />
        case 'Delete':
-         return <Delete open={open} onClose={handleClose} />
+         return <Delete selectedData={props.selectedData} open={open} onClose={handleClose} />
     }
   }
 
