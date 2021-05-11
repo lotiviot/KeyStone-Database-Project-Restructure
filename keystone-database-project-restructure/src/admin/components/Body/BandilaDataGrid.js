@@ -34,7 +34,7 @@ export default function AdminComponent()
                     rows={data} 
                     columns={Columns} 
                     checkboxSelection 
-                    pageSize={13} 
+                    pageSize={60} 
                     onSelectionChange={(newSelection) => {
                         setSelected(newSelection.rowIds)
                     }} 

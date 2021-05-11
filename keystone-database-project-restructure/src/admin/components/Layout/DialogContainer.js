@@ -15,8 +15,8 @@ export default function DialogContainer(props) {
                 <ul>
                 <li className ="li"><DialogWrapper label ="Upload"/></li>
                 <li className ="li"><DialogWrapper label ="Delete" selectedData={props.selectedData}/></li>
-                {/* <li className ="li"><DialogWrapper label ="Filter"/></li>
-                <li className ="li"><DialogWrapper label ="Email"/></li>
+                 <li className ="li"><DialogWrapper label ="Filter"/></li>
+                {/*<li className ="li"><DialogWrapper label ="Email"/></li>
                 <li className ="li"><DialogWrapper label ="Group"/></li>
                 <li className ="li"><DialogWrapper label ="Sum"/></li>
                 <li className ="li"><DialogWrapper label ="Export"/></li>

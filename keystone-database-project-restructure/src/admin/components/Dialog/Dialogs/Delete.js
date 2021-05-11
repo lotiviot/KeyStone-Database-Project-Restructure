@@ -8,6 +8,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import { blue } from '@material-ui/core/colors';
 import uuid from "uuid";
 import {db} from 'constants/Fire'
+
 export default function Upload(props) {
   const { onClose, selectedValue, open } = props;
   const [temp, setTemp] = React.useState("")

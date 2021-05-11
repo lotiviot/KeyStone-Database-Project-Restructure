@@ -22,8 +22,9 @@ class AdminPage extends Component {
         return (
                 <div className="App">
                     {/* <h1>Admin Page Component Suite</h1> */}
-                    <BandilaDataGrid/>
                     <button className="backend-field" onClick={this.logout}>log out</button>
+                    <BandilaDataGrid/>
+                    
                 </div> 
         );
     }

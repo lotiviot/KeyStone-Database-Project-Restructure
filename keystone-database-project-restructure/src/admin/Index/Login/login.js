@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
 import './login.scss'
+import Button from '@material-ui/core/Button';
+
 
 //simple login component that handles the given name
 class Login extends Component {
@@ -33,7 +35,7 @@ class Login extends Component {
     return (
         <div className="login-main-flex">
           <form className="admin-login-form">
-            <h3>Login for Admin Suite</h3>
+            <h3>Keystone Adult Day Program</h3>
             <div className="field">
               <label>Email</label>
               <input value={this.state.email} 
@@ -60,7 +62,7 @@ class Login extends Component {
                 className="backend-field" 
               />
             </div>
-            <button className="backend-field" type="submit" onClick={this.login}>Login</button>
+            <Button variant="contained" color="white" className="button" type="submit" onClick={this.login}>Login</Button>
           </form>
         </div>
           

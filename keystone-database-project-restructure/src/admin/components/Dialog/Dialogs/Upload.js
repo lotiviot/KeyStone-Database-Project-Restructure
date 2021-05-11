@@ -9,6 +9,7 @@ import { blue } from '@material-ui/core/colors';
 import uuid from "uuid";
 import {db} from 'constants/Fire'
 export default function Upload(props) {
+
   const { onClose, selectedValue, open } = props;
   const [id, setId] = React.useState(uuid.v4());
   const [firstName, setFirstName] = React.useState("");
@@ -190,8 +191,7 @@ export default function Upload(props) {
                         />
                     </DialogContent>
                     <DialogActions>
-                    <button onClick={() => {AddDoc()
-                        }}>test </button>
+                    <button onClick={() => {AddDoc()}}>Upload </button>
                     </DialogActions> 
     </Dialog>
   );
