@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
 import 'admin/Admin.scss'
-import LoadDataGrid from 'constants/LoadDataGrid'
+//import LoadDataGrid from 'constants/LoadDataGrid'
 import BandilaDataGrid from 'admin/components/Body/BandilaDataGrid'
 
 
