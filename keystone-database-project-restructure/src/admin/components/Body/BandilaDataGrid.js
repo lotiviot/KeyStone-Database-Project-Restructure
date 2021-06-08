@@ -1,6 +1,6 @@
 
 //imports to handle basic functionality of the program component suite
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import {db , storage} from 'constants/Fire';
 import DialogContainer from 'admin/components/Layout/DialogContainer'
 import './BandilaDataGrid.scss'
@@ -20,10 +20,13 @@ export default function AdminComponent()
 {
     const [selected, setSelected] = React.useState([]);
     const [data, setData] = React.useState([]);
-    LoadDataGrid().then((e) => {
-        setData(e)
-    })
-
+    useEffect(()=>{
+        LoadDataGrid().then((e) => {
+            setData(e)
+            console.log("asdf")
+        })    
+    }, [])
+    
     return (
         //whole return for form and checkbox
         <div>
