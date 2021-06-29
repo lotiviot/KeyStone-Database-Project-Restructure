@@ -5,21 +5,29 @@ import Button from '@material-ui/core/Button';
 
 
 //simple login component that handles the given name
+// creates class Login with child Component (extends)
 class Login extends Component {
-
+  // The constructor method is a special method of a class for creating and initializing an object of that class.
+  // This creates class props in class Login and therefore it's child Component
   constructor(props) {
+    // super calls the function to the parent object
     super(props);
+    //"this" refers to the object it belongs to, in this case Login
     this.login = this.login.bind(this);
+    // .bind attaches a handler to an event for the elements
     this.handleChange = this.handleChange.bind(this);
+    // rebinds when a change is made to the login info
     this.state = {
       email: '',
       password: ''
     };
+    // this creates the login info input
   }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
+  // e is event so event.whatevs is the element that initatied the event
 
   //using firebase auth, check email and password state variables and verifies if user is in system
   login(e) {
