@@ -14,7 +14,7 @@ class Login extends Component {
     super(props);
     //"this" refers to the object it belongs to, in this case Login
     this.login = this.login.bind(this);
-    // .bind attaches a handler to an event for the elements
+    // .bind attaches a handler to an event for the elements (???)
     this.handleChange = this.handleChange.bind(this);
     // rebinds when a change is made to the login info
     this.state = {
@@ -30,8 +30,11 @@ class Login extends Component {
   // e is event so event.whatevs is the element that initatied the event
 
   //using firebase auth, check email and password state variables and verifies if user is in system
+  // makes class login, taking paramater event
   login(e) {
+    // cancels event if possible meaning event defualt action will not happen
     e.preventDefault();
+    // auth proccess then error is caught if auth fails
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
     }).catch((error) => {
         console.log(error);
@@ -41,6 +44,7 @@ class Login extends Component {
   //form that handles renders the simple login
   render() {
     return (
+        // all of this jsut make the login UI and takes the input
         <div className="login-main-flex">
           <form className="admin-login-form">
             <h3>Keystone Adult Day Program</h3>
@@ -73,7 +77,7 @@ class Login extends Component {
             <Button variant="contained" color="white" className="button" type="submit" onClick={this.login}>Login</Button>
           </form>
         </div>
-          
+        // Button just makes button using Material UI
     );
   }
 }

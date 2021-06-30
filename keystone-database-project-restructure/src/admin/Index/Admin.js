@@ -13,11 +13,11 @@ class AdminPage extends Component {
         this.logout = this.logout.bind(this);
             
     }
-    
+    // this is the actual logout action through firebase
     logout = () => {
         fire.auth().signOut();
     }    
-
+    // render of logout button
     render() {
         return (
                 <div className="App">
@@ -28,5 +28,5 @@ class AdminPage extends Component {
                 </div> 
         );
     }
-}
+}// all of this just makes logout button
 export default AdminPage;
