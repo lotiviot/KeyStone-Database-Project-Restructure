@@ -4,16 +4,18 @@ import fire from 'constants/Fire'
 import Login from './Login/login';
 import Admin from './Admin';
 
-
+// class AdminBase is amde with child Component
 export default class AdminBase extends Component {
     constructor(props){
         super(props);
+        // component of class AdminBase user is initailized as empty (get away from class components )
         this.state ={
             user:{},
         }
     }
 
     //wrapper for authListener
+    //Listener waits for auth to happen after DidMount
     componentDidMount(){
         this.authListener();
     }
@@ -31,7 +33,8 @@ export default class AdminBase extends Component {
                localStorage.removeItem('user');
             }
         });
-    }
+    }// other comments basically cover but on Auth state change user info is saved to local storage as uid then removed on logout
+    
 
     //if user is found in state, go to ACS, if no login
     render() {
