@@ -12,3 +12,4 @@ export const DEV_LOCATIONS    = '/admin/locations';
 export const DEV_PERSONNEL    = '/admin/personnel';
 export const DEV_CALENDAR    = '/admin/calendar';
 export const DEV_ANNOUNCEMENTS    = '/admin/announcements';
+// all tags for different pages
