@@ -38,7 +38,7 @@ export default function Upload(props) {
   let test = () =>{
     console.log("thing")
   }
-
+// this function uses a map and handle changes to delete a doc and then checks if it's deleted
   
 
   return (
@@ -54,3 +54,4 @@ export default function Upload(props) {
     </Dialog>
   );
 }
+// this handles the actual action of runniong the function on click of a button
