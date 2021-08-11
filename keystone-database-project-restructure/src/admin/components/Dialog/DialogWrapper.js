@@ -40,7 +40,7 @@ export default function DialogWrapper(props) {
          return <Delete selectedData={props.selectedData} open={open} onClose={handleClose} />
     }
   }
-   // checks case for upload or delete then handes based on case
+   // checks case for upload or delete then handels based on case
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>

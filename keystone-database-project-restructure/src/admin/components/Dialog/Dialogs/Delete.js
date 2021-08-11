@@ -36,7 +36,7 @@ export default function Upload(props) {
   }
  
   let test = () =>{
-    console.log("thing")
+    console.log("testing")
   }
 // this function uses a map and handle changes to delete a doc and then checks if it's deleted
   
