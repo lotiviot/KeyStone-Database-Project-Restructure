@@ -44,7 +44,7 @@ class Login extends Component {
   //form that handles renders the simple login
   render() {
     return (
-        // all of this jsut make the login UI and takes the input
+        // all of this just makes the login UI and takes the input
         <div className="login-main-flex">
           <form className="admin-login-form">
             <h3>Keystone Adult Day Program</h3>

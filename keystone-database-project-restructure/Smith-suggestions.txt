@@ -1,0 +1,30 @@
+AdminBase contians the ability to put a user in local storage
+so that can go with the other login stuff in login.js then delete
+adminbase.js for efficency and just organizatianlly from the dev standpoint
+
+
+I believe Admin.js in the login folder can be made into a dialouge because it is a button function and render like 
+delete and upload so could be moved and renamed
+
+For all dialogs Tristan wants to move away from material-ui so we need to work in a new tool there 
+for design, Log out button needs to be restyled along with the dialouges when we take out material-ui for uniformity and just overall style of the page
+
+We need some type of error for a failed login, it just doesn't work and there is no indication of what went wrong
+or if the site is just loading
+
+The delete button from Delete.js is also still using the upload test functionallity so we need to seperate those so there is no criss-crossing
+, so basically just make the functions seperate and make the buttons do what they're supposed to
+
+Filter just doesn't do anything, as far as I can tell it is only styled right now so it should be given a .js file with the other 
+dialouges 
+
+An error message saying all fields are required should be added to the upload form because when you don't enter all the info and try to 
+enter it nothing happens, but no reason is given to the user
+
+There are some UI optins in DialogContainer that I don't think we need, they are not in use now and don't seem like buttons we'll need
+
+Could use the addition of an info button as part of the UI with tutorial like info as like a here's what this is and what stuff does
+
+
+
+
