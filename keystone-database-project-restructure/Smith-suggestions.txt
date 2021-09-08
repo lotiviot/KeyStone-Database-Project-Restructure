@@ -1,6 +1,6 @@
-AdminBase contians the ability to put a user in local storage
-so that can go with the other login stuff in login.js then delete
-adminbase.js for efficency and just organizatianlly from the dev standpoint
+Done -- AdminBase contians the ability to put a user in local storage
+        so that can go with the other login stuff in login.js then delete
+        adminbase.js for efficency and just organizatianlly from the dev standpoint
 
 
 I believe Admin.js in the login folder can be made into a dialouge because it is a button function and render like 
