@@ -1,7 +1,7 @@
 //admin parent component that runs contains the router for all the tabs once login is completed
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
-import 'admin/Admin.scss'
+import './Admin.scss'
 //import LoadDataGrid from 'constants/LoadDataGrid'
 import BandilaDataGrid from 'admin/components/Body/BandilaDataGrid'
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import fire from 'constants/Fire';
 import './login.scss'
 import Button from '@material-ui/core/Button';
-import Admin from 'admin/Index/Admin';
+import Admin from 'admin/Index/Login/Admin';
 
 
 
