@@ -24,6 +24,7 @@ export default function Upload(props) {
   const [amount, setAmount] = React.useState("");
   const [dateDonorContacted, setDateDonorContacted] = React.useState("");
   const [reason, setReason] = React.useState("");
+  // all of these constants are there to initalize all required fields for a new doc
 
   const handleClose = () => {
     onClose(selectedValue);
@@ -38,7 +39,7 @@ export default function Upload(props) {
 
 // //basic implementation of pushing a document to firebase
  let AddDoc = async(e) => {     
-
+ // this is where the site and firebase are synced after a new doc
     //object creation
     console.log('asdf')
     const doc = {
@@ -56,7 +57,7 @@ export default function Upload(props) {
         dateDonorContacted:dateDonorContacted ,
         reason:reason ,
     }
-
+    // this sets all the values of a 'doc'
     //firestore object creation with error checking
     await db.collection("payments")
         .doc(doc.id)
@@ -194,5 +195,5 @@ export default function Upload(props) {
                     <button onClick={() => {AddDoc()}}>Upload </button>
                     </DialogActions> 
     </Dialog>
-  );
+  ); // all of these inputs handle the changes of each value within a doc then sets the value of the doc to the input
 }

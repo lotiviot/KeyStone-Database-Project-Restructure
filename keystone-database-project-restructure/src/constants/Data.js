@@ -1,5 +1,5 @@
 import { TextareaAutosize } from '@material-ui/core';
-
+// these are all field names/ info for data grid
 export const Columns = [
     { 
         field: 'id', headerName: 'ID', width: 70 
@@ -59,7 +59,7 @@ export const Columns = [
         field: 'lastName', headerName: 'Last Name', width: 0 
     },
 ]
-
+// testing IDs
 export const testData = [
     {
         id: '1',

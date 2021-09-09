@@ -17,7 +17,7 @@ export default async function LoadDataGrid() {
       e.forEach( doc => {
         const item = {};
         const data = doc.data()
-        
+        // all of this just assigns idenitifying values for each docs
         item.id = data.id;
         item.firstName = data.firstName;
         item.lastName = data.lastName

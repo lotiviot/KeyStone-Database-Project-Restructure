@@ -1,7 +1,7 @@
 //admin parent component that runs contains the router for all the tabs once login is completed
 import React, { Component } from 'react';
 import fire from 'constants/Fire';
-import 'admin/Admin.scss'
+import './Admin.scss'
 //import LoadDataGrid from 'constants/LoadDataGrid'
 import BandilaDataGrid from 'admin/components/Body/BandilaDataGrid'
 
@@ -13,11 +13,11 @@ class AdminPage extends Component {
         this.logout = this.logout.bind(this);
             
     }
-    
+    // this is the actual logout action through firebase
     logout = () => {
         fire.auth().signOut();
     }    
-
+    // render of logout button
     render() {
         return (
                 <div className="App">
@@ -28,5 +28,5 @@ class AdminPage extends Component {
                 </div> 
         );
     }
-}
+}// all of this just makes logout button
 export default AdminPage;

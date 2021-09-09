@@ -1,0 +1,22 @@
+Done  -- AdminBase contians the ability to put a user in local storage
+so that can go with the other login stuff in login.js then delete
+adminbase.js for efficency and just organizatianlly from the dev standpoint
+
+
+I believe Admin.js in the login folder can be made into a login because it is page render for the login
+
+For all dialogs Tristan wants to move away from material-ui so we need to work in a new tool there 
+for design
+
+We need some type of error for a failed login, it just doesn't work and there is no indication of what went wrong
+or if the site is just loading
+
+The delete button from Delete.js is also still using the upload test functionallity so we need to seperate those so there is no criss-crossing
+, so basically just make the functions seperate and make the buttons do what they're supposed to
+
+Filter just doesn't do anything, as far as I can tell it is only styled right now so it should be given a .js file with the other 
+dialouges 
+
+
+
+
