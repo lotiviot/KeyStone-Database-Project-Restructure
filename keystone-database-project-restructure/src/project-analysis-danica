@@ -1,0 +1,24 @@
+project-analysis-danica
+
+What I understand about the project:
+-Admin.scss has styling of general button and backend components
+-App.js is the main app component in REACT which acts as a container for all other components
+-Diologue section 
+    -gives unique variables to requirements in a new document
+    -syncing and pushing to firebase (with error checking)
+    -ensures deletion of a document
+    -makes sure requirements are shown to the user during upload with proper styling
+Login section
+    -lets user type in their info
+    -captures errors during authentation proc
+    -uses firebase authentication to verify user in the system by checking email and password
+AdminBase section
+-lets info go to the local storage if login is successful
+-removes info when logging out
+What I don't understand about the project:
+-The constructor method:
+    -What info is the parent component and whata info from the parent component is the child component?
+-when I type in "npm start" I get all of these errors
+    -not sure why bc it worked before
+What I think can be improved:
+- let the code run smoothly when typing in "npm start" in the terminal 
