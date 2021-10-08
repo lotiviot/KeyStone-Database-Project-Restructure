@@ -6,12 +6,12 @@ Material UI Data Grid
 
 -2 versions: MIT licensed and commercially licensed
 -MIT
-    -
+    -table demo with claen abstraction
+    -import { DataGrid } from '@mui/x-data-grid';
 -Commercial
-    -
-
-
-Data Grid W/O Material UI
+    -can go to thousands of rows and columns
+    -more advanced thaan MIT 
+    -import {DataGridPro} from '@mui/x-data-grid-pro';
 
 
 https://codesandbox.io/s/material-demo-forked-hjlv8?file=/demo.js 
@@ -19,6 +19,8 @@ https://codesandbox.io/s/material-demo-forked-hjlv8?file=/demo.js
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 const columns = [
+  //field is way of identification, and headname is what the user sees
+  //"editable" lets the user change the text in the column
   { field: "id", headerName: "ID", width: 90 },
   {
     field: "firstName",
@@ -44,10 +46,12 @@ const columns = [
     headerName: "Full name",
     description: "This column has a value getter and is not sortable.",
     sortable: false,
+    //won't let the user switch the first and last name 
     width: 160,
     valueGetter: (params) =>
       `${params.getValue(params.id, "firstName") || ""} ${
         params.getValue(params.id, "lastName") || ""
+        //this function allows values (in this case any name), to be pulled from anywhere)
       }`
   }
 ];
@@ -63,6 +67,7 @@ const rows = [
   { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 }
 ];
+//^^text in the column
 
 export default function DataGridDemo() {
   return (
@@ -72,6 +77,8 @@ export default function DataGridDemo() {
         columns={columns}
         checkboxSelection
         disableSelectionOnClick
+        //^^lets user check off the checkbox 
+        //disables double clcik
       />
     </div>
   );
@@ -79,12 +86,22 @@ export default function DataGridDemo() {
 
 
 https://blog.ag-grid.com/react-get-started-with-react-grid-in-5-minutes/
-- AG Data grid:
--Video notes:
-    -
+- Data Grid without Material UI aka AG Grid
+- handles business level data volumes 
+-allows to enable features such as toggles, a mini menu for filtering, moving controls ,and edits in rows
+
 
 https://medium.com/swlh/create-a-responsive-grid-with-react-flexbox-styled-components-f7a55f607480
 - Create a Responsive Grid with REACT, Flexbox and Styled components
 -no more CSS frameworks (unecessary stuff)
--Steps:
-    - use create-react-app, then npm i styled components
+-shows how to understand styled componenets 
+
+Differences and Similarities of Material UI and AG Grid:
+-Differences:
+  -AG grid has aa built in option for mataerial theme styling, meaning it can export to excel and can do row grouping
+  -AG can multisort and is easily customizable and can easily adapt to design changes
+  -Material UI has CSS framework and REACT components thaat utilize Google's material design
+    -good starter for beginners
+- Similarities
+  -both can sort, filter, search, and change order and size of columns
+  -have common REACT project bundler set up
