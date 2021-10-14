@@ -22,7 +22,8 @@ export default function Upload(props) {
   };
 
   let deleteFunc = () => {
-    var ref = db.collection("payments").doc("asdf")
+    /**db.collection('payments')*/
+    var ref = db.collection("development").doc("asdf")
     console.log(ref)
     props.selectedData.map(e=>{
       console.log(e)

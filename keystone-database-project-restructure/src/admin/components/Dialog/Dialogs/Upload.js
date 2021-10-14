@@ -59,7 +59,7 @@ export default function Upload(props) {
     }
     // this sets all the values of a 'doc'
     //firestore object creation with error checking
-    await db.collection("payments")
+    await db.collection("development")
         .doc(doc.id)
         .set(doc)
         .then(
