@@ -27,8 +27,12 @@ export default function AdminComponent()
         })    
     }, [])
     
+    //DATA IS YOUR MAIN SOURCE OF INFORMATION FOR THE GRID THIS IS WHAT YOU WILL USE TO DO YOUR THINGS AND STUFF
+    console.log(data)
     return (
         //whole return for form and checkbox
+
+        // UNDERNEATH THIS IS WHERE YOU WILL PLAY WITH THE DATAGRID
         <div>
             <DialogContainer selectedData={selected}/>
             <div className="dataset">
