@@ -7,6 +7,7 @@ export default async function LoadDataGrid() {
   const note_arr = [];
 
   //calls db at given collection
+  //await db.collection('payments')
   await db.collection('development')
   .get()
   .then(e => {
