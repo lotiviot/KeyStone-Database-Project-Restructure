@@ -34,6 +34,7 @@ class Login extends Component {
   //using firebase auth, check email and password state variables and verifies if user is in system
   // makes class login, taking paramater event
   login(e) {
+    console.log("do i get here")
     // cancels event if possible meaning event defualt action will not happen
     e.preventDefault();
     // auth proccess then error is caught if auth fails
@@ -86,7 +87,7 @@ class Login extends Component {
   }
 }
 
-class AdminBase extends Component {
+export default class AdminBase extends Component {
   constructor(props){
       super(props);
       // component of class AdminBase user is initailized as empty (get away from class components )
@@ -119,6 +120,7 @@ class AdminBase extends Component {
 
   //if user is found in state, go to ACS, if no login
   render() {
+      console.log(this.state.user)
       return (
           <div>
               {this.state.user ? (<Admin />): (<Login />)}
@@ -128,4 +130,4 @@ class AdminBase extends Component {
 }
 
 
-export default Login;
+//export Login;
