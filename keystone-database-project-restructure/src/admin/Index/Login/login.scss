@@ -1,22 +1,27 @@
 @import '~IndexCSS/master';
 // all main login styling 
 .login-main-flex{
-  background-image: $headerGradient, url("/img/DSCN3195.jpg");
-  //background-color: gray;
-  background-size: cover;
-  background-repeat: repeat;
+  background-color: gray;
+  background-size: fill;
   display: flex;
   height: auto;
-  padding-left: 5vw;
-  
+  padding-left: 30vw;
+
   .admin-login-form{
-    margin-top: 25vw;
+    margin-top: 350px;
     padding-bottom: 15vw;
     border: 4px black;
+    position: flex;
+    width: 763px;
+    height: 458px;
+    left: 578px;
+    top: 361px;
+    border-radius: 15px;
     h3{
       color: white;
       font-family: $fontRoboto;
       font-weight: bold;
+    
     }
     .field{
       display: flex;
@@ -34,14 +39,65 @@
       }
     }
     .button{
-      width: 60%;
+      width: 20%;
       padding: 12px 20px;
-      margin: 8px;
-      margin-left:60px;
+      margin: 10px;
+      margin-left:15vw;
       display: inline-block;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
     }
   }
+}
+
+.rec1 {
+position: absolute;
+width: 1920px;
+height: 100px;
+left: 0px;
+top: 0px;
+background: #4EC4CF;
+border-radius: 9px;
+}
+
+.rec2 {
+  position: absolute;
+  width: 1920px;
+  height: 100px;
+  left: 0px;
+  top: 100px;
+  background: #0E848D;
+  border-radius: 9px;
+  }
+
+  .shp1{
+    position: absolute;
+  width: 174px;
+  height: 144px;
+  left: -120px;
+  top: 403px;
+  background: #4EC4CF;
+  transform: rotate(-30deg);
+  }
+
+.log-field{
+  position: absolute;
+  width: 763px;
+  height: 458px;
+  left: 578px;
+  top: 361px;
+  border-radius: 15px;
+  outline: auto;
+  outline-color: white;
+}
+
+.shp2{
+  position: absolute;
+width: 174px;
+height: 144px;
+left: 1800px;
+top: 803px;
+background: #0E848D;
+transform: rotate(-30deg);
 }
