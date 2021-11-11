@@ -35,7 +35,7 @@ export default function DialogWrapper(props) {
   let renderSwitch = (dialog) => {
     switch(dialog) {
       case 'Upload':
-        return <Upload open={open} onClose={handleClose} />
+        return <Upload open={open} onClose={handleClose}/>
        case 'Delete':
          return <Delete selectedData={props.selectedData} open={open} onClose={handleClose} />
     }

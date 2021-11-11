@@ -3,6 +3,7 @@ import fire from 'constants/Fire';
 import './login.scss'
 import Button from '@material-ui/core/Button';
 import Admin from 'admin/Index/Login/Admin';
+import logo from 'assets/img/keystone.png'
 
 
 
@@ -49,37 +50,39 @@ class Login extends Component {
         // all of this just makes the login UI and takes the input
         <div className="login-main-flex">
           <form className="admin-login-form">
-          <header className = "rec1"></header>
-          <h3> Keystone Day Program</h3>
-          <img src = "./Keystone Logo Horizontal_4x-.jpg"></img>
-          <header className = "rec2"></header>
-          <div className = "shp1"> </div>
-          <div className = "shp2"></div>
-            <div className = "log-field">
-            <div className="field">
-              <label>Email</label>
-              <input value={this.state.email}
-                onChange={this.handleChange}
-                type="email"
-                name="email"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-                className="backend-field" />
-            </div>
+            <header className = "rec1"></header>
+            <h3>Keystone Day Program</h3>
+            <img alt="keystone logo" src={logo}></img>
+            <header className = "rec2"></header>
+            <div className = "shp1"></div>
+            <div className = "shp2"></div>
+              <div className = "log-field">
+              <div className="field">
+                <label>Email</label>
+                <input value={this.state.email}
+                  onChange={this.handleChange}
+                  type="email"
+                  name="email"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  className="backend-field" 
+                />
+              </div>
 
-            <div className="field">
-              <label>Password</label>
-              <input value={this.state.password}
-                onChange={this.handleChange}
-                type="password"
-                name="password"
-                id="exampleInputPassword1"
-                placeholder="Password"
-                className="backend-field" />
+              <div className="field">
+                <label>Password</label>
+                <input value={this.state.password}
+                  onChange={this.handleChange}
+                  type="password"
+                  name="password"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  className="backend-field" />
+              </div>
+              <input className="button" type="submit" title="dingus" onClick={this.login}/>
+              {/* <Button variant="contained" color="white" className="button" type="submit" onClick={this.login}>Login</Button> */}
             </div>
-            <Button variant="contained" color="white" className="button" type="submit" onClick={this.login}>Login</Button>
-          </div>
           </form>
         </div>
         // Button just makes button using Material UI
@@ -87,7 +90,7 @@ class Login extends Component {
   }
 }
 
-class AdminBase extends Component {
+export default class AdminBase extends Component {
   constructor(props){
       super(props);
       // component of class AdminBase user is initailized as empty (get away from class components )
@@ -127,6 +130,3 @@ class AdminBase extends Component {
       )
   }
 }
-
-
-export default Login;

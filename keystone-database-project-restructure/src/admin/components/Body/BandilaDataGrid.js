@@ -16,21 +16,21 @@ import {Columns} from 'constants/Data'
 import LoadDataGrid from 'constants/LoadDataGrid'
 
 
-export default function AdminComponent()
-{
+export default function AdminComponent(props)
+{   
+    console.log(props)
     const [selected, setSelected] = React.useState([]);
     const [data, setData] = React.useState([]);
     useEffect(()=>{
         LoadDataGrid().then((e) => {
             setData(e)
-            console.log("asdf")
         })    
     }, [])
     
     return (
         //whole return for form and checkbox
         <div>
-            <DialogContainer selectedData={selected}/>
+            <DialogContainer logoutFunc={props.logoutFunc} selectedData={selected}/>
             <div className="dataset">
                 <DataGrid 
                     autoHeight 
