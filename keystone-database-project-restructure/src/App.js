@@ -1,3 +1,15 @@
+//import logo from './logo.svg';
+//import './App.css';
+//import {CarsGrid} from './carsgrid';
+
+//function App() {
+  //return (
+      //<CarsGrid />
+  //);
+//}
+//export default App;
+
+//^^ above is the App.js in the tutorial
 import React from 'react';
 import './App.scss';
 import AdminBase from 'admin'
