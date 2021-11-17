@@ -105,3 +105,6 @@ Differences and Similarities of Material UI and AG Grid:
 - Similarities
   -both can sort, filter, search, and change order and size of columns
   -have common REACT project bundler set up
+
+  AG Data Grid:
+  Old code on BandilaData.js will be on Notion
