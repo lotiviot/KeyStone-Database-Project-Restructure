@@ -1,50 +1,37 @@
+import React, {useState} from 'react';
+import {AgGridColumn, AgGridReact} from 'ag-grid-react';
 
-//imports to handle basic functionality of the program component suite
-import React, { Component, useEffect } from 'react'
-import {db , storage} from 'constants/Fire';
-import DialogContainer from 'admin/components/Layout/DialogContainer'
-import './BandilaDataGrid.scss'
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-// import CheckboxContainer from './CheckboxContainer';
-//import GrabUrl from 'admin/LoadFunctions/GrabUrl';
-import { DataGrid } from '@material-ui/data-grid';
-import uuid from "uuid";
-
-//this import will need to be able to be flexible as necessary with whatever new backend component is introduced prefixed, Load
-
-import {Columns} from 'constants/Data'
-import LoadDataGrid from 'constants/LoadDataGrid'
-
-
-export default function AdminComponent()
-{
-    const [selected, setSelected] = React.useState([]);
-    const [data, setData] = React.useState([]);
-    useEffect(()=>{
-        LoadDataGrid().then((e) => {
-            setData(e)
-            console.log("asdf")
-        })    
-    }, [])
+const InitialRowData = [
+    {make: "", model: "", price: 35000 },
     
-    return (
-        //whole return for form and checkbox
-        <div>
-            <DialogContainer selectedData={selected}/>
-            <div className="dataset">
-                <DataGrid 
-                    autoHeight 
-                    rows={data} 
-                    columns={Columns} 
-                    checkboxSelection 
-                    pageSize={60} 
-                    onSelectionChange={(newSelection) => {
-                        setSelected(newSelection.rowIds)
-                    }} 
-                />
-            </div>
-        </div>    
-    )
-    
+];
+//{rowvalue: "columnname", rowname: "columnname", rowvalue: columnvalue },
+export function CarsGrid() {
+    // set to default data
+    const [rowData, setRowData] = useState(InitialRowData);
+
+   return (
+       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>   
+           <AgGridReact
+                rowData={rowData}
+                >
+                <AgGridColumn field="make"></AgGridColumn>
+                <AgGridColumn field="model"></AgGridColumn>
+                <AgGridColumn field="price"></AgGridColumn>
+           </AgGridReact>
+       </div>
+   )
+};
+// can change make, model, and price to different name (change to name of 1st row)
+//before ><:
+    //sortable={true}
+        //can move stuff in columns move up or down
+    //filter={true}
+        //can let user search for specific letters/phrases in grid if grid has alot of info
+    //editable={true}
+        //user can change value
+
 }
-
