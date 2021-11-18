@@ -33,7 +33,6 @@ export default function BandilaDataGrid() {
         //with material ui and i hate them for it. 
 
         LoadDataGrid().then((e) => {
-            console.log(e)
             var tempObj = e
             var tempStr = ""
             e.map((item, index)=>{
