@@ -55,9 +55,19 @@ class Login extends Component {
           <form className="admin-login-form">
             <header className = "rec1"></header>
             <header className = "rec2"></header>
+            <header className = "rec3"></header>
+            <header className = "rec4"></header>
             <div className = "shp1"></div>
             <div className = "shp2"></div>
+            <div className ="shp3"></div>
+            <div className = "shp4"></div>
+            <div className = "shp5"></div>
+            <div className = "shp6"></div>
+            <div className = "triangle"></div>
               <div className = "log-field">
+                <br></br>
+                <br></br>
+                <br></br>
               <div className="field">
                 <label>Email</label>
                 <input value={this.state.email}
@@ -70,7 +80,10 @@ class Login extends Component {
                   className="backend-field" 
                 />
               </div>
-
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
               <div className="field">
                 <label>Password</label>
                 <input value={this.state.password}
@@ -81,6 +94,11 @@ class Login extends Component {
                   placeholder="Password"
                   className="backend-field" />
               </div>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
               <input className="button" type="submit" title="dingus" onClick={this.login}/>
               {/* <Button variant="contained" color="white" className="button" type="submit" onClick={this.login}>Login</Button> */}
             </div>
@@ -90,6 +108,7 @@ class Login extends Component {
     );
   }
 }
+
 
 export default class AdminBase extends Component {
   constructor(props){

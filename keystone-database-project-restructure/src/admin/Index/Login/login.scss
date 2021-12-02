@@ -53,7 +53,7 @@
 
 .rec1 {
 position: absolute;
-width: 280px;
+width: 570px;
 height: 75px;
 left: 0px;
 top: 0px;
@@ -62,13 +62,32 @@ background: #4EC4CF;
 
 .rec2 {
   position: absolute;
-  width: 280px;
-  height: 65px;
+  width: 570px;
+  height: 63px;
   left: 0px;
   top: 100px;
   background: #0E848D;
   top:76px;
   }
+
+  .rec3 {
+    position: absolute;
+    width: 570px;
+    height: 75px;
+    left: 1330px;
+    top: 0px;
+    background: #4EC4CF;
+    }
+    
+    .rec4 {
+      position: absolute;
+      width: 570px;
+      height: 63px;
+      left: 1330px;
+      top: 100px;
+      background: #0E848D;
+      top:76px;
+      }
 
   .shp1{
   position: absolute;
@@ -97,9 +116,52 @@ width: 174px;
 height: 144px;
 left: 1800px;
 top: 803px;
+background: #4EC4CF;
+transform: rotate(-30deg);
+}
+
+.shp3{
+  position: absolute;
+width: 222px;
+height: 150px;
+left: 1778px;
+top: 353px;
+
 background: #0E848D;
 transform: rotate(-30deg);
 }
+
+
+.shp4{
+  position: absolute;
+width: 222px;
+height: 150px;
+left: -170px;
+top: 675px;
+background-color: #0E848D;
+transform: rotate(32deg);
+}
+
+.shp5{
+  position: absolute;
+width: 174px;
+height: 150px;
+left: 1200px;
+top: 1000px;
+background: #4EC4CF;
+transform: rotate(-30deg);
+}
+
+.shp6{
+  position: absolute;
+width: 174px;
+height: 150px;
+left: 500px;
+top: 1000px;
+background: #0E848D;
+transform: rotate(-30deg);
+}
+
 
 .img{
   top:500px;
