@@ -49,10 +49,11 @@ class Login extends Component {
     return (
         // all of this just makes the login UI and takes the input
         <div className="login-main-flex">
+            <div>
+            <img class ="img" alt="keystone logo" src={logo}></img>
+            </div>
           <form className="admin-login-form">
             <header className = "rec1"></header>
-            <h3>Keystone Day Program</h3>
-            <img alt="keystone logo" src={logo}></img>
             <header className = "rec2"></header>
             <div className = "shp1"></div>
             <div className = "shp2"></div>

@@ -3,7 +3,7 @@
 .login-main-flex{
   background-color: gray;
   background-size: fill;
-  display: flex;
+  display:flex;
   height: auto;
   padding-left: 30vw;
 
@@ -53,22 +53,21 @@
 
 .rec1 {
 position: absolute;
-width: 1920px;
-height: 100px;
+width: 280px;
+height: 75px;
 left: 0px;
 top: 0px;
 background: #4EC4CF;
-border-radius: 9px;
 }
 
 .rec2 {
   position: absolute;
-  width: 1920px;
-  height: 100px;
+  width: 280px;
+  height: 65px;
   left: 0px;
   top: 100px;
   background: #0E848D;
-  border-radius: 9px;
+  top:76px;
   }
 
   .shp1{
@@ -100,4 +99,9 @@ left: 1800px;
 top: 803px;
 background: #0E848D;
 transform: rotate(-30deg);
+}
+
+.img{
+  top:500px;
+  padding-bottom: 900px;
 }
